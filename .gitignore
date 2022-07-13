@@ -1,0 +1,13 @@
+aws
+aws.pub
+credentials
+*.tfstate
+*.backup
+.DS_Store
+.terraform
+*.ini
+app-instance/app/output/*
+app-instance/app/conf.toml
+*output.json
+config.tfvars
+state
