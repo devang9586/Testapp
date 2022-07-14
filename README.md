@@ -60,7 +60,7 @@ $ chmod +x execute_terraform.sh
 $ ./execute_terraform.sh
 ```
 
-7) Wait until Load Balancer url is printed, app & rds might take a few minutes to boot up.
+7) Wait until Load Balancer url is printed, app & RDS might take a few minutes to boot up.
 
 8) To destroy the infrastructure.
 
@@ -82,6 +82,7 @@ This respository consists of multiple tech stacks
 * Nginx web server - Proxy for the app
 * Go lang container - Builds and runs the app
 
-### Future wok
+### Future work
 
-* Terraform can be initialised by Git CI/CD pipeline and docker-compose can be replaced by Kubernetes.
+* Terraform can be initialised by Git CI/CD pipeline and docker-compose can be replaced by Kubernetes. 
+
