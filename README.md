@@ -1,6 +1,15 @@
 # TechTestApp
 
-### Summary
+### Pre-requisite 
+
+* Terraform 0.12+
+* Packer 1.4+
+* Packer plugin: packer-post-processor-amazon-ami-management 0.7.0+
+* Git
+* Suggested OS: Linux (Debian)
+
+### High-level Architecture
+
 
 This respository consists of multiple tech stacks
 * Terraform - Builds AWS instances/resources
@@ -18,66 +27,53 @@ This respository consists of multiple tech stacks
 * App builds itself from source upon launch in container
 * Remote state file and lock on AWS
 
-### Requirements
 
-* Terraform 0.12+
-* Packer 1.4+
-* Packer plugin: packer-post-processor-amazon-ami-management 0.7.0+
-* Git
-* Suggested OS: Linux/Mac OSX
+### Install Terraform/Packer with Brew (For Linux Debian):
 
-### Install Terraform/Packer with Brew (For Mac OSX):
+* sudo apt-get install terraform
+* sudo apt-get install packer
 
-* brew install terraform
-* brew install packer
+### Derployment
 
-### Installation
-
-1) Clone repository:
+1) Clone repository this repo locally:
 
 ```
 $ git clone https://github.com/dansali/TechTestApp.git
 ```
 
-2) Modify ```config.tfvars```
+2) Modify ```config.tfvars``` according to AWS account.
 
-3) Add AWS credentials into ```secrets/credentials.ini```
+3) Add AWS credentials into ```secrets/credentials.ini``` according to AWS account.
 
-4) Generate new keys
+4) Generate new keys for encryption.
 
 ```
 $ chmod +x generate_keys.sh
 $ ./generate_keys.sh
 ```
 
-5) Generate new AMI's
+5) Generate new AMI's from built-json.
 
 ```
 $ chmod +x packer.sh
 $ ./packer.sh
 ```
 
-6) Execute terraform script
+6) Execute terraform script.
 
 ```
 $ chmod +x execute_terraform.sh
 $ ./execute_terraform.sh
 ```
 
-7) Wait until LB url is printed, app & rds might take a few minutes to boot
+7) Wait until Load Balancer url is printed, app & rds might take a few minutes to boot up.
 
-8) To destroy
+8) To destroy the infrastructure.
 
 ```
 $ chmod +x destroy_terraform.sh
 $ ./destroy_terraform.sh
 ```
-
-### Developed on
-
-* Terraform v0.12.17
-* Packer 1.4.5
-* Packer plugin: packer-post-processor-amazon-ami-management 0.7.0
 
 ### Built on
 
