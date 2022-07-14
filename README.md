@@ -22,12 +22,12 @@
 * Remote state file and lock on AWS
 
 
-### Install Terraform/Packer with Brew (For Linux Debian):
+### Install Terraform/Packer (For Linux Debian):
 
 * sudo apt-get install terraform
 * sudo apt-get install packer
 
-### Derployment
+### Deployment
 
 1) Clone repository this repo locally:
 
