@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Check if setup has already been run, don't execute again.
-# Terragrunt will fit in perfectly here... :)
 if [ ! -f "setup/state" ]; then
     cd setup
     terraform init
