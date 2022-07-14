@@ -10,16 +10,10 @@
 
 ### High-level Architecture
 
+![Techtestapp](https://user-images.githubusercontent.com/109196045/178875495-ae80472c-5dbc-452d-9e3d-925b222eebaf.jpg)
 
-This respository consists of multiple tech stacks
-* Terraform - Builds AWS instances/resources
-* S3/DynamoDB - Holds remote state file/lock
-* Packer - Builds the AMI for Terraform to deploy to EC2
-* Docker Composer - Spawns 2 docker containers on the EC2
-* Nginx web server - Proxy for the app
-* Go lang container - Builds and runs the app
 
-### Features
+### Addition Features
 
 * Encryption for S3/DynamoDB/AMI/EBS
 * Auto scaling app instances
@@ -79,3 +73,15 @@ $ ./destroy_terraform.sh
 
 * https://github.com/servian/TechTestApp
 * https://github.com/wata727/packer-post-processor-amazon-ami-management
+
+This respository consists of multiple tech stacks
+* Terraform - Builds AWS instances/resources
+* S3/DynamoDB - Holds remote state file/lock
+* Packer - Builds the AMI for Terraform to deploy to EC2
+* Docker Composer - Spawns 2 docker containers on the EC2
+* Nginx web server - Proxy for the app
+* Go lang container - Builds and runs the app
+
+### Future wok
+
+* Terraform can be initialised by Git CI/CD pipeline and docker-compose can be replaced by Kubernetes.
