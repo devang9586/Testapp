@@ -84,5 +84,5 @@ This respository consists of multiple tech stacks
 
 ### Future work
 
-* Terraform can be initialised by Git CI/CD pipeline and docker-compose can be replaced by Kubernetes. 
+* Terraform can be initialised by Git CI/CD pipeline and docker-compose can be replaced by Kubernetes & Helm. 
 
